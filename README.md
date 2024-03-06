@@ -3,6 +3,7 @@
 > see vsc.json
 
 ### plugins
+- vim
 - Trailing spaces
 - rust-analyzer
 - rust
