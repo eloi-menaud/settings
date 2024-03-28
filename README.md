@@ -3,7 +3,7 @@
 > see vsc.json
 
 ### plugins
-- vim
+- (vim)
 - Trailing spaces
 - rust-analyzer
 - rust
@@ -41,4 +41,35 @@ ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=("${(@)ZSH_AUTOSUGGEST_ACCEPT_WIDGETS:#forward-ch
 bindkey '^I' forward-word
 bindkey '^[[1;2C' autosuggest-accept
 
+alias k='kubectl -n $(cat ~/.kns)'
+alias kns='echo $1 > ~/.kns'
 ```
+# App
+## 1 VSCODE
+see `keybinding.json` and `settings.json`
+## 2 Hyper
+```
+keymaps: {
+	'editor:copy': 'ctrl+c',
+	'editor:paste': 'ctrl+v',
+	'editor:break': 'ctrl+x'
+}
+```
+# shortcut
+### vscode switch Hyper
+- create `/usr/bin/focus`
+- paste :
+```bash
+#!/bin/bash
+if [[ $(xdotool getactivewindow getwindowname) != *"Hyper"* ]]; then
+	xdotool search --onlyvisible --name "Hyper" windowactivate
+else
+	id=$(xdotool search --onlyvisible --name "Visual Studio Code" | tail -n 1 | cut -d' ' -
+	xdotool windowactivate $id
+fi
+```
+- `sudo chmod +x /usr/bin/focus`
+- go to `settings > keyboard > View and Customize Shortcuts > Custom Shortcuts > +`
+	- name : `focus`
+	- cmd : `focus`
+	- Shortcut : `Ctrl+j`

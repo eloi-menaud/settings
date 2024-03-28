@@ -1,14 +1,6 @@
 [
     {
-        "key": "shift+alt+3",
-        "command": "workbench.view.scm"
-    },
-    {
-        "key": "ctrl+shift+g",
-        "command": "-workbench.view.scm"
-    },
-    {
-        "key": "shift+alt+1",
+        "key": "alt+[Slash]",
         "command": "workbench.view.explorer"
     },
     {
@@ -16,7 +8,7 @@
         "command": "-workbench.view.explorer"
     },
     {
-        "key": "shift+alt+2",
+        "key": "alt+0",
         "command": "workbench.view.search"
     },
     {
@@ -24,7 +16,15 @@
         "command": "-workbench.view.search"
     },
     {
-        "key": "shift+alt+0",
+        "key": "alt+3",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "alt+[Minus]",
+        "command": "-workbench.view.scm"
+    },
+    {
+        "key": "alt+[Minus]",
         "command": "workbench.action.toggleActivityBarVisibility"
     },
     {
@@ -39,7 +39,7 @@
         "when": "terminalFocus && terminalTextSelected"
     },
     {
-        "key": "cmd+j",
+        "key": "ctrl+j",
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
     }

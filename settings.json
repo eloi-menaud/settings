@@ -7,16 +7,10 @@
   "editor.semanticHighlighting.enabled": false,
 
   //----- VIM ------
-  "vim.normalModeKeyBindings": [
-    {"before": ["a"],"after": []},
-    {"before": ["s"],"after": []},
-    {"before": ["o"],"after": []},
-    {"before": ["p"],"after": []},
-    {"before": ["<Esc>"],"after": ["i"]}
-  ],
   "vim.handleKeys": {
-    "<D-c>": false, //<C-c> win
-    "<D-v>": false  //<C-v> win
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-a>": false
   },
   "vim.mouseSelectionGoesIntoVisualMode": false,
   "vim.startInInsertMode": true,
@@ -54,6 +48,8 @@
           "keyword.other.unit.percentage.css",
           "string.quoted.double.rust",
           "punctuation.definition.string.rust",
+          "string.unquoted.plain.out.yaml",
+          "string"
         ]
       },
       // KEYWORD
@@ -217,7 +213,7 @@
     // Text selection
     "editor.selectionBackground": "#ffffff1b",
     "editor.selectionHighlightBackground": "#4b4b4b",
-    "editor.inactiveSelectionBackground": "#cc2200",
+    "editor.inactiveSelectionBackground": "#111111",
     // "editor.selectionForeground": "#f00", // Currently only works in high contrast themes, but making the theme high contrast messes with a lot of other things.
 
     // Find results
@@ -251,7 +247,7 @@
     "activityBar.background": "#000",
     "editorWhitespace.foreground": "#000", // Whitespace on selection
     "sideBar.background": "#000",
-
+    "panel.background": "#000",
     // Misc lines and rulers
     "editorRuler.foreground": "#222", // Enabled by "editor.rulers": [100],
     "sideBar.border": "#222",
@@ -270,6 +266,9 @@
   "editor.renderWhitespace": "all",
   "breadcrumbs.enabled": false,
   //"workbench.colorTheme": "Pitch Black",
-  "terminal.integrated.fontSize": 14,
-  "workbench.activityBar.visible": false
+  "terminal.integrated.fontSize": 15,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 3,
+  "git.confirmSync": false,
+  //"workbench.activityBar.location": "hidden",
 }
